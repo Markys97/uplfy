@@ -1,0 +1,52 @@
+.our-work{
+    background: linear-gradient(257.56deg, #53CBF9 22.53%, #88DEFF 69.82%, #7AD7FA 69.82%);
+    &__container{
+        min-height: 53.9rem;
+       
+        padding-top: 8.3rem;
+    }
+    &__content{
+     
+        display: flex;
+        gap:3rem ;
+        margin-left: auto;
+        
+
+    }
+    &__img{
+        width: 58.9rem;
+        height: 36.8rem;
+        position: relative;
+
+        img{
+           width: 100%;
+            height: auto;
+        }
+    }
+    &__body{
+        width: 34.4rem;
+        min-height: 27.1rem;
+        padding-top: 2.9rem;
+       
+    }
+    &__title{
+        margin-bottom: 1.6rem;
+    }
+    &__specialization{
+        margin-bottom: 4.8rem;
+    }
+    &__item{
+        margin-bottom: .8rem;
+    }
+    &__bottom{
+        
+        margin-bottom: 8rem;
+       
+    }
+    &__text{
+        margin-bottom: 3.2rem;
+    }
+
+
+    
+}

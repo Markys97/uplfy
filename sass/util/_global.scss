@@ -1,0 +1,249 @@
+.text{
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+}
+.main{
+    overflow: hidden;
+    position: relative;
+}
+
+.container{
+    padding: 0 4rem;
+}
+.burger{
+    width: 3.1rem;
+    height: 1.7rem;
+    cursor: pointer;
+    &__row{
+        display: block;
+        width: 3.1rem;
+        height: 0.4rem;
+        background: #FFFFFF;
+        border-radius: 0.4rem;
+        &:not(:last-child){
+            margin-bottom: 0.2rem;
+        }
+
+        &--small{
+            width: 2.3rem;
+        }
+    }
+
+}
+
+.logo{
+    width: 6.67rem;
+    height: 3rem;
+    a{
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        img{
+            width: 100%;
+            height:auto;
+        }
+    }
+}
+.title{
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 2.6rem;
+    line-height: 3.1rem;
+
+    text-transform: uppercase;
+    
+    color: #FFFFFF;
+    &--small{
+        font-weight: 700;
+        font-size: 2.0rem;
+        line-height: 2.4rem;
+        margin-bottom: 0.266rem;
+    }
+    
+}
+.text{
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: #FFFFFF;
+   
+}
+
+.link{
+    display: block;
+    span{
+        font-family: 'Exo 2';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 2.0rem;
+        line-height: 2.4rem;
+        color: #FFFFFF;
+        display: inline-block;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            display: block;
+            width: 5.1rem;
+            height: .1rem;
+            background: #FFFFFF;
+            bottom: -.4rem;
+        }
+    }
+}
+a{
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    text-decoration-line: underline;
+    color: #FFFFFF;
+    
+}
+
+.arrow-icon{
+    width: 3.1rem;
+    height: .2rem;
+    background-color: rgba(#fff, 0.3);
+    margin-top: .3rem;
+    position: relative;
+    margin-left: -1rem;
+    z-index:  1;
+    
+    &::after{
+        content: '';
+        position: absolute;  
+        display: block; 
+        width: 1rem;
+        background-color: rgba(#fff, 0.3);
+        height: 0.2em;
+        right: -0.3rem;
+        top: -0.3rem; 
+        transform: rotate(45deg);
+    }
+    &::before{
+        content: '';
+        position: absolute;  
+        display: block; 
+        width: 1rem;
+        background-color: rgba(#fff, 0.3);
+        height: 0.2em;
+        right: -0.3rem;
+        top: 0.4rem;
+        transform: rotate(-45deg);
+    }
+    
+}
+
+
+.button-fixe{
+    position: fixed;
+    width: 14.4rem;
+    height: 2.6rem;
+    background: #FFFFFF;
+    border-radius: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    border: none;
+    outline: none;
+    padding: 2rem 0.6rem;
+    left: 3.1rem;
+    bottom: 2.4rem;
+    cursor: pointer;
+    &__text{
+        font-family: 'Exo 2';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        color: #8ADDEB;
+    }
+    svg{
+        display: none;
+    }
+}
+.big-word{
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 14.4rem;
+    line-height: 17.3rem;
+    text-transform: uppercase;   
+    color: #FFFFFF; 
+    opacity: 0.1;
+    position: fixed;
+    z-index: 10;
+    bottom:11.8rem ;
+}
+.wrapper-section{
+    position: relative;
+    
+}
+.link-down{
+    height: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+   
+   
+    &-icon{
+        transition: all 300ms ease-in-out;
+        margin-left: -1rem;
+    }
+}
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:1023px) {
+    html,body{
+        font-size: calc(0.505vw + 0.905vh - 0.17rem);
+    }
+    .container{
+        padding: 0 3.1rem;
+    } 
+
+}
+
+@media screen and (max-width:667px) {
+    html,body{
+        font-size: calc(0.505vw + 0.905vh - 0.17rem);
+    }
+    .container{
+        padding: 0 2rem;
+    } 
+
+}
+
+
+
+@media screen and (max-width:320px) {
+    html,body{
+        font-size: 10px;
+    }
+
+}

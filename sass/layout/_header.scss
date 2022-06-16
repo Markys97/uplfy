@@ -1,0 +1,40 @@
+.header{
+    width: 100%;
+    position: fixed;
+    top: 1.6rem;
+    z-index: 100;
+
+
+    &__container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+       
+    }
+
+    &__burger{
+        margin-bottom:1.6rem ;
+    }
+    &__tel{
+        a{
+            font-family: 'Exo 2';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 1.5rem;
+            line-height: 1.8rem;
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+        display: none;
+        &--desktop{
+           display: block;
+           a{
+            font-size: 1.4rem;
+            line-height: 1.7rem;
+           }
+        }
+    }
+    
+
+    
+}
