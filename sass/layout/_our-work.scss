@@ -1,52 +1,89 @@
 .our-work{
+    width: 100%;
     background: linear-gradient(257.56deg, #53CBF9 22.53%, #88DEFF 69.82%, #7AD7FA 69.82%);
-    &__container{
-        min-height: 53.9rem;
-       
-        padding-top: 8.3rem;
-    }
+    padding-top: 8.3rem;
     &__content{
-     
-        display: flex;
-        gap:3rem ;
-        margin-left: auto;
-        
-
-    }
-    &__img{
-        width: 58.9rem;
-        height: 36.8rem;
         position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end!important;
+        z-index: 10!important;
 
-        img{
-           width: 100%;
-            height: auto;
-        }
     }
-    &__body{
-        width: 34.4rem;
-        min-height: 27.1rem;
-        padding-top: 2.9rem;
-       
+    &__row{
+        max-width: 73.2rem;
+        display: flex;
+        gap: 4rem;
+
+        
     }
     &__title{
         margin-bottom: 1.6rem;
     }
-    &__specialization{
-        margin-bottom: 4.8rem;
-    }
-    &__item{
-        margin-bottom: .8rem;
-    }
-    &__bottom{
-        
-        margin-bottom: 8rem;
-       
-    }
     &__text{
         margin-bottom: 3.2rem;
     }
+    &__skill{
+        width: 23rem;
+        height: 6.6rem;
+        // border:1px solid red;
+        margin-bottom: 4.8rem;
+    }
+    &__link{
+        display: inline-block;
+        margin-bottom: 0.8rem;
+    }
+    &__bottom{
+        width: 100%;
+        // border:1px solid red;
+        display: flex;
+        justify-content: flex-end;
+    }
+    @media screen  and (max-width:1024px){
 
-
-    
+        padding-top: 12.4rem;
+        &__container{
+           
+            
+        }
+        &__row{
+          
+            flex-direction: column-reverse;
+            max-width: 44.4rem;
+            margin: auto;
+            
+        }
+        &__title{
+            text-align: center;
+        }
+        &__text{
+           margin:0 auto 2.4rem;
+           text-align: center;
+        }
+        &__link{
+           text-align: center;
+        }
+        &__bottom{
+            justify-content: center;
+        }
+        &__img{
+            width: 30.4rem;
+            height: 32.3rem;
+            margin: auto;
+            img{
+                width: 100%;
+                height: auto;
+               
+            }
+        }
+        &__skill{
+            margin: auto;
+            margin-bottom: 3.2rem;
+        }
+    }
+    @media screen  and (max-width:668px){
+      &__row{
+        max-width: 28rem;
+      }
+    }
 }

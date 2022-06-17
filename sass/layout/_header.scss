@@ -3,6 +3,7 @@
     position: fixed;
     top: 1.6rem;
     z-index: 100;
+    // border-bottom:2px solid red ;
 
 
     &__container{
@@ -36,5 +37,16 @@
     }
     
 
-    
+    @media screen and (max-width:1023px) {
+        &__tel{
+            a{
+              
+            }
+            display: block;
+            &--desktop{
+               display: none;
+               
+            }
+        }
+    }
 }

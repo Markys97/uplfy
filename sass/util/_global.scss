@@ -1,16 +1,14 @@
-.text{
-    font-family: 'Exo 2';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 1.4rem;
-    line-height: 1.8rem;
-}
-.main{
-    overflow: hidden;
-    position: relative;
-}
 
+
+
+.section-container{
+    min-height: 53.9rem;
+    padding-left: 15.2rem;
+    padding-left: 15.2rem;
+
+}
 .container{
+    width: 100%;
     padding: 0 4rem;
 }
 .burger{
@@ -77,6 +75,13 @@
 
 .link{
     display: block;
+    &:hover{
+        span{
+            &::after{
+                width: 100%;
+            }
+        }
+    }
     span{
         font-family: 'Exo 2';
         font-style: normal;
@@ -87,11 +92,12 @@
         display: inline-block;
         position: relative;
         &::after{
+            transition: all 500ms ease;
             content: '';
             position: absolute;
             display: block;
             width: 5.1rem;
-            height: .1rem;
+            height: .2rem;
             background: #FFFFFF;
             bottom: -.4rem;
         }
@@ -108,39 +114,6 @@ a{
     
 }
 
-.arrow-icon{
-    width: 3.1rem;
-    height: .2rem;
-    background-color: rgba(#fff, 0.3);
-    margin-top: .3rem;
-    position: relative;
-    margin-left: -1rem;
-    z-index:  1;
-    
-    &::after{
-        content: '';
-        position: absolute;  
-        display: block; 
-        width: 1rem;
-        background-color: rgba(#fff, 0.3);
-        height: 0.2em;
-        right: -0.3rem;
-        top: -0.3rem; 
-        transform: rotate(45deg);
-    }
-    &::before{
-        content: '';
-        position: absolute;  
-        display: block; 
-        width: 1rem;
-        background-color: rgba(#fff, 0.3);
-        height: 0.2em;
-        right: -0.3rem;
-        top: 0.4rem;
-        transform: rotate(-45deg);
-    }
-    
-}
 
 
 .button-fixe{
@@ -181,26 +154,70 @@ a{
     color: #FFFFFF; 
     opacity: 0.1;
     position: fixed;
-    z-index: 10;
+    z-index: 0;
     bottom:11.8rem ;
-}
-.wrapper-section{
-    position: relative;
     
+   
 }
+
 .link-down{
-    height: 2rem;
     display: flex;
-    justify-content: flex-end;
     align-items: center;
-   
-   
-    &-icon{
-        transition: all 300ms ease-in-out;
+    justify-content: center;
+    height: 2rem;
+    
+    &__fleche{
+        width: 3.1rem;
+        height: 0.25rem;
+        background: rgba(#FFFFFF,0.7);
+        margin-top: .2rem;
         margin-left: -1rem;
+        position: relative;
+        &::after{
+            position: absolute;
+            content: '';
+            background: rgba(#FFFFFF,0.7);
+            width:1rem;
+            height: 0.15rem;
+            transform: rotate(45deg);
+            left: 2.2rem;
+            top: -0.3rem;
+        }
+        &::before{
+            position: absolute;
+            content: '';
+            background: rgba(#FFFFFF,0.7);
+            width:1rem;
+            height: 0.15rem;
+            transform: rotate(-45deg);
+            left: 2.2rem;
+            top: 0.4rem;
+        }
+    }
+    &__link{
+        position: relative;
+        display: inline-block;
+        z-index: 10;
     }
 }
 
+.fp-tableCell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: unset;
+}
+
+
+.background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    box-shadow: rgb(130, 214, 240) -300px -300px 300px -120px inset; 
+    background: rgb(131, 202, 242);
+}
 
  
 
@@ -215,35 +232,81 @@ a{
 
 
 
+html{
+    font-size: calc(0.605vw + 0.705vh - 0rem);
+}
 
 
 
-
-@media screen and (max-width:1023px) {
-    html,body{
+@media screen and (max-width:1024px) {
+    html{
         font-size: calc(0.505vw + 0.905vh - 0.17rem);
     }
     .container{
         padding: 0 3.1rem;
-    } 
+    }
+    .title{
+       
+        font-size: 2.4rem;
+        line-height: 3.1rem;
+        
+        &--small{
+            font-weight: 700;
+            font-size: 2.0rem;
+            line-height: 2.4rem;
+            margin-bottom: 0.266rem;
+        }
+        
+    }
+    .text{
+        font-family: 'Exo 2';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        color: #FFFFFF;
+       
+    }
 
 }
 
-@media screen and (max-width:667px) {
-    html,body{
-        font-size: calc(0.505vw + 0.905vh - 0.17rem);
+@media screen and (max-width:668px) {
+    html{
+        font-size: 10px;
     }
     .container{
         padding: 0 2rem;
     } 
 
-}
-
-
-
-@media screen and (max-width:320px) {
-    html,body{
-        font-size: 10px;
+    .button-fixe{
+        position: fixed;
+        width: 14.4rem;
+        height: 2.6rem;
+        background: unset;
+        border-radius: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+        border: none;
+        outline: none;
+        padding: 2rem 0.6rem;
+        left: 3.1rem;
+        bottom: 2.4rem;
+        cursor: pointer;
+        &__text{
+            font-family: 'Exo 2';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 1.2rem;
+            line-height: 1.4rem;
+            color: #8ADDEB;
+            display: none;
+        }
+        svg{
+            display: block;
+        }
     }
+
 
 }
