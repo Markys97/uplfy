@@ -243,7 +243,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: unset;
+  height: unset !important;
 }
 
 .background {
@@ -645,5 +645,66 @@ html {
   background: #FFFFFF;
   display: block;
   margin: auto;
+}
+
+.writing {
+  width: 100%;
+  padding-top: 6.4rem;
+  padding-left: 18.4rem;
+}
+
+.writing__container {
+  position: relative;
+}
+
+.writing__title {
+  margin-bottom: 3.6rem;
+}
+
+.writing__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.writing__info {
+  max-width: 498rem;
+}
+
+.writing__info-title {
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.0rem;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: .8rem;
+  border: 1px solid red;
+}
+
+.writing__date {
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: #FFFFFF;
+}
+
+.writing__img {
+  width: 49.8rem;
+  height: 41.8rem;
+  position: relative;
+  bottom: 0;
+}
+
+.writing__img img {
+  position: absolute;
+  height: auto;
+  width: 100%;
+  bottom: 0;
+  left: -3rem;
 }
 /*# sourceMappingURL=main.css.map */
