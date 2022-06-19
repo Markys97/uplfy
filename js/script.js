@@ -1,13 +1,39 @@
-// Переворот экрана
-if ($(window).width()<1000) {
-    window.addEventListener("orientationchange", function() {
-        if (window.matchMedia("(orientation: landscape)").matches) {
-           location.reload();
-        }
-    }, false);
-}
+// // Переворот экрана
+// if ($(window).width()<1000) {
+//     window.addEventListener("orientationchange", function() {
+//         if (window.matchMedia("(orientation: landscape)").matches) {
+//            location.reload();
+//         }
+//     }, false);
+// }
 $(document).ready(function(){
-   
+    
+    let handlerButtonFixe=(indice)=>{
+        let position;
+        $('section').each((index,el)=>{
+            let color= $(el).data('color')
+             position=$(el).data('lenght')
+            
+            if(position=== indice){
+                if(color==='none' && $(window).width()<=668){
+                    $('.button-fixe').css({
+                        visibility:'hidden',
+                        
+                    })
+                 }else{
+                    $('.button-fixe').css({
+                        visibility:'visible'
+                    })
+                    $('.button-fixe___img path').each((i,icon)=>{
+                        $(icon).css({
+                         fill:color
+                        })
+                       })
+                 }
+             
+            }
+        })
+    }
     setTimeout(
       function() 
       {
@@ -22,6 +48,7 @@ $(document).ready(function(){
         // Параметры контента на фоне
         contentParams.push($(el).data('text')).par;
     });
+    
       // Открытие модальных блоков
       if(window.location.hash.includes('#')){
         var click = window.location.hash;
@@ -120,12 +147,12 @@ $(document).ready(function(){
     //         }
     //     ]
     // });
-    $('#section_4 .slider_custom').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-        if (currentSlide != nextSlide) {
-             $('#section_4 .slide_card[data-slick-index="'+nextSlide+'"]').animate({opacity:1}, 300);
-            $('#section_4 .slide_card[data-slick-index="'+currentSlide+'"]').animate({opacity:0}, 300);
-        }
-    });
+    // $('#section_4 .slider_custom').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    //     if (currentSlide != nextSlide) {
+    //          $('#section_4 .slide_card[data-slick-index="'+nextSlide+'"]').animate({opacity:1}, 300);
+    //         $('#section_4 .slide_card[data-slick-index="'+currentSlide+'"]').animate({opacity:0}, 300);
+    //     }
+    // });
     // Слайдер планшетка
     // if ($(window).width() < 993) {
     //     $('#section_2 .slider_custom, #section_5 .slider_custom .big_col').slick({
@@ -193,6 +220,8 @@ $(document).ready(function(){
         verticalCentered: true,
         responsiveWidth: 0,
         onLeave: function(origin, destination, direction){
+
+           
             // Затухание
             $('.section[data-lenght="'+destination+'"]').animate({opacity:1}, 800);
             $('.section[data-lenght="'+origin+'"]').animate({opacity:0}, 300);
@@ -213,7 +242,7 @@ $(document).ready(function(){
             $('.background div:not(.active)').html(contentParams[destination-1]).fadeIn('500');
         },
     }
-    if ($(window).width() < 1200) {
+    if ($(window).width() < 1024) {
         sectionSettings = {
             // Скроллинг
             scrollingSpeed: 800,
@@ -228,7 +257,7 @@ $(document).ready(function(){
             verticalCentered: true,
             responsiveWidth: 0,
             onLeave: function(origin, destination, direction){
-                // Затухание
+                
                 $('#section_'+destination).animate({opacity:1}, 800);
                 $('#section_'+origin).animate({opacity:0}, 300);
                 // Изменение фона кнопки
@@ -249,7 +278,7 @@ $(document).ready(function(){
             },
         }
     }
-    if ($(window).width() < 993) {
+    if ($(window).width() < 668) {
         sectionSettings = {
             // Скроллинг
             scrollingSpeed: 800,
@@ -264,6 +293,8 @@ $(document).ready(function(){
             verticalCentered: true,
             responsiveWidth: 0,
             onLeave: function(origin, destination, direction){
+                
+                handlerButtonFixe(destination)
                 // Затухание
                 $('.section[data-lenght="'+destination+'"]').animate({opacity:1}, 800);
                 $('.section[data-lenght="'+origin+'"]').animate({opacity:0}, 300);
@@ -285,7 +316,7 @@ $(document).ready(function(){
             },
         }
     }
-    if ($(window).width() < 551) {
+    if ($(window).width() < 320) {
         sectionSettings = {
             // Скроллинг
             scrollingSpeed: 800,

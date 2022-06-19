@@ -13,6 +13,14 @@ ul, ol {
   list-style: none;
 }
 
+html {
+  font-size: calc(0.605vw + 0.705vh - 0rem);
+}
+
+.main {
+  overflow: hidden;
+}
+
 .section-container {
   min-height: 53.9rem;
   padding-left: 15.2rem;
@@ -145,13 +153,15 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 100;
+  z-index: 1000;
   border: none;
   outline: none;
   padding: 2rem 0.6rem;
   left: 3.1rem;
   bottom: 2.4rem;
   cursor: pointer;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
 }
 
 .button-fixe__text {
@@ -177,7 +187,7 @@ a {
   color: #FFFFFF;
   opacity: 0.1;
   position: fixed;
-  z-index: 0;
+  z-index: 10;
   bottom: 11.8rem;
 }
 
@@ -257,8 +267,9 @@ a {
   background: #83caf2;
 }
 
-html {
-  font-size: calc(0.605vw + 0.705vh - 0rem);
+.wrapper-container {
+  z-index: 20;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 1024px) {
@@ -285,6 +296,14 @@ html {
     font-size: 1.4rem;
     line-height: 1.8rem;
     color: #FFFFFF;
+  }
+  .big-word {
+    font-size: 7rem;
+    bottom: 11.8rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    bottom: 16.4rem;
   }
 }
 
@@ -330,13 +349,31 @@ html {
   .button-fixe svg {
     display: block;
   }
+  .title {
+    font-size: 2.0rem;
+    line-height: 2.4rem;
+  }
+  .title--small {
+    font-weight: 700;
+    font-size: 2.0rem;
+    line-height: 2.4rem;
+    margin-bottom: 0.266rem;
+  }
+  .big-word {
+    font-size: 5rem;
+    bottom: 11.8rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    bottom: 0;
+  }
 }
 
 .header {
   width: 100%;
   position: fixed;
   top: 1.6rem;
-  z-index: 100;
+  z-index: 1000;
 }
 
 .header__container {
@@ -389,7 +426,6 @@ html {
 
 .our-work {
   width: 100%;
-  background: linear-gradient(257.56deg, #53CBF9 22.53%, #88DEFF 69.82%, #7AD7FA 69.82%);
   padding-top: 8.3rem;
 }
 
@@ -399,14 +435,10 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end !important;
-      -ms-flex-pack: end !important;
-          justify-content: flex-end !important;
-  z-index: 10 !important;
 }
 
 .our-work__row {
-  max-width: 73.2rem;
+  max-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -447,46 +479,62 @@ html {
     padding-top: 12.4rem;
   }
   .our-work__row {
+    max-width: 44.4rem;
+    margin: auto;
+    gap: 11.8rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
-    max-width: 44.4rem;
-    margin: auto;
-  }
-  .our-work__title {
-    text-align: center;
-  }
-  .our-work__text {
-    margin: 0 auto 2.4rem;
-    text-align: center;
-  }
-  .our-work__link {
-    text-align: center;
-  }
-  .our-work__bottom {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
   .our-work__img {
-    width: 30.4rem;
+    max-width: 30.4rem;
     height: 32.3rem;
     margin: auto;
   }
   .our-work__img img {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 100%;
+  }
+  .our-work__title {
+    margin-bottom: 3.2rem;
+    text-align: center;
+  }
+  .our-work__text {
+    margin-bottom: 2.4rem;
+    text-align: center;
   }
   .our-work__skill {
     margin: auto;
     margin-bottom: 3.2rem;
   }
+  .our-work__bottom {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 @media screen and (max-width: 668px) {
+  .our-work {
+    padding-top: 8rem;
+  }
   .our-work__row {
-    max-width: 28rem;
+    max-width: 28.0rem;
+    gap: 5.8rem;
+  }
+  .our-work__title {
+    margin-bottom: 2.4rem;
+  }
+  .our-work__text {
+    margin-bottom: 3.6rem;
+  }
+  .our-work__skill {
+    margin-bottom: 3.6rem;
   }
 }
 
@@ -553,6 +601,111 @@ html {
   padding-left: 3.2rem;
 }
 
+@media screen and (max-width: 1024px) {
+  .skill {
+    padding-top: 32.9rem;
+  }
+  .skill__container-row {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    z-index: 1;
+  }
+  .skill__content {
+    width: 55.6rem;
+    height: 30.3rem;
+    gap: 6.4rem;
+    margin: 0 -4rem;
+  }
+  .skill__container {
+    padding-left: 19.6rem;
+  }
+  .item-skill {
+    max-width: 47.9rem;
+    min-height: 16.3rem;
+  }
+  .item-skill__list {
+    counter-reset: list;
+  }
+  .item-skill__item {
+    margin-bottom: 1.6rem;
+    position: relative;
+  }
+  .item-skill__item::before {
+    counter-increment: list;
+    content: "0" counter(list);
+    position: absolute;
+    left: 0;
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 2.24028rem;
+    line-height: 2.7rem;
+    /* identical to box height */
+    color: #FFFFFF;
+  }
+  .item-skill__link {
+    padding-left: 3.2rem;
+  }
+  .item-skill__link span {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 667px) {
+  .skill {
+    padding-top: 1.8rem;
+  }
+  .skill__container {
+    padding-left: 0;
+  }
+  .skill__title {
+    margin-bottom: 4.8rem;
+    padding-left: 4.5rem;
+  }
+  .skill__content {
+    width: 55.6rem;
+    height: 30.3rem;
+    gap: 3.2rem;
+    padding-left: 2rem;
+  }
+  .item-skill {
+    max-width: 23.0rem;
+    min-height: 17.2rem;
+  }
+  .item-skill__title {
+    margin-bottom: 4rem;
+    font-size: 1.9rem;
+  }
+  .item-skill__list {
+    counter-reset: list;
+  }
+  .item-skill__item {
+    margin-bottom: 1.6rem;
+    position: relative;
+  }
+  .item-skill__item::before {
+    counter-increment: list;
+    content: "0" counter(list);
+    position: absolute;
+    left: 0;
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 2.24028rem;
+    line-height: 2.7rem;
+    /* identical to box height */
+    color: #FFFFFF;
+  }
+  .item-skill__link {
+    padding-left: 3.2rem;
+  }
+  .item-skill__link span {
+    font-size: 1.8rem;
+  }
+}
+
 .with-us {
   width: 100%;
   padding-top: 6.4rem;
@@ -589,6 +742,7 @@ html {
   display: inline-flex;
   gap: 0.8rem;
   position: relative;
+  margin-bottom: 6.5rem;
 }
 
 .item-with-us {
@@ -706,5 +860,10 @@ html {
   width: 100%;
   bottom: 0;
   left: -3rem;
+}
+
+.end {
+  width: 100%;
+  height: 32.1rem;
 }
 /*# sourceMappingURL=main.css.map */

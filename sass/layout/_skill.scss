@@ -64,3 +64,136 @@
 
     }
 }
+
+
+@media screen and (max-width:1024px) {
+    .skill{
+ 
+        padding-top: 32.9rem;
+        &__container-row{
+            padding-left: 4rem;
+            padding-right: 4rem;
+            overflow-x: auto;
+            scrollbar-width: none;
+            z-index: 1;
+        }
+        &__content{
+          
+            width: 55.6rem;
+            height: 30.3rem;
+            gap: 6.4rem;
+            margin: 0 -4rem;
+    
+        }
+        &__container{
+      
+            padding-left: 19.6rem;
+        }
+    }
+
+    .item-skill{
+        max-width: 47.9rem;
+        min-height: 16.3rem;
+        
+        
+        &__list{
+            counter-reset: list;
+        }
+        &__item{
+            margin-bottom:1.6rem ;
+            position: relative;
+            &::before{
+                counter-increment: list;
+                content: "0"counter(list);
+                position: absolute;
+                left: 0;
+                font-family: 'Exo 2';
+                font-style: normal;
+                font-weight: 300;
+                font-size: 2.24028rem;
+                line-height: 2.7rem;
+                /* identical to box height */
+                
+                
+                color: #FFFFFF;
+            }
+          
+            
+        }
+        &__link{
+            padding-left: 3.2rem;
+            span{
+                font-size: 1.8rem;
+            }
+    
+        }
+    }
+    
+}
+@media screen and (max-width:667px) {
+    .skill{
+ 
+        padding-top: 1.8rem;
+        &__container{
+      
+            padding-left:0;
+        }
+        
+        &__title{
+            margin-bottom: 4.8rem;
+            padding-left: 4.5rem;
+           
+        }
+        &__content{
+          
+            width: 55.6rem;
+            height: 30.3rem;
+            gap: 3.2rem;
+            padding-left: 2rem;
+    
+        }
+        
+    }
+
+    .item-skill{
+        max-width: 23.0rem;
+        min-height: 17.2rem;
+        
+        &__title{
+            margin-bottom: 4rem;
+            font-size: 1.9rem;
+        }
+        &__list{
+            counter-reset: list;
+        }
+        &__item{
+            margin-bottom:1.6rem ;
+            position: relative;
+            &::before{
+                counter-increment: list;
+                content: "0"counter(list);
+                position: absolute;
+                left: 0;
+                font-family: 'Exo 2';
+                font-style: normal;
+                font-weight: 300;
+                font-size: 2.24028rem;
+                line-height: 2.7rem;
+                /* identical to box height */
+                
+                
+                color: #FFFFFF;
+            }
+          
+            
+        }
+        &__link{
+            padding-left: 3.2rem;
+            span{
+                font-size: 1.8rem;
+            }
+    
+        }
+    }
+    
+}
