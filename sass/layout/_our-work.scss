@@ -2,12 +2,13 @@
     width: 100%;
     // background: linear-gradient(257.56deg, #53CBF9 22.53%, #88DEFF 69.82%, #7AD7FA 69.82%);
     padding-top: 8.3rem;
+    &__container{
+        padding-left: 18.4rem;
+    }
     &__content{
         position: relative;
         width: 100%;
         display: flex;
-
-
 
     }
     &__row{
@@ -40,6 +41,18 @@
         // border:1px solid red;
         display: flex;
         justify-content: flex-end;
+    }
+    &__body{
+        width: 34.4rem;
+        min-height: 27.1rem;
+    }
+    &__img{
+        width: 34.7rem;
+        height: 36.8rem;
+        img{
+            width: auto;
+            height: 100%;
+        }
     }
     @media screen  and (max-width:1024px){
         padding-top:12.4rem;
@@ -102,6 +115,10 @@
         }
         &__skill{
             margin-bottom: 3.6rem;
+        }
+        &__body{
+            width: 28rem;
+            min-height: 33.6rem;
         }
     }
 }

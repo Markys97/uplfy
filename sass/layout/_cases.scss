@@ -1,10 +1,134 @@
 .cases{
     width: 100%;
-    background: linear-gradient(256.95deg, #F6A0AF 8.56%, #FFBFD2 89.87%);
+    padding-top:6.4rem;
+  
+
     &__container{
-        min-height: 53.9rem;
-        padding-left: 19.4rem;
-     
+        padding-left: 18.4rem;
+        
+        
     }
-    
+    &__title{
+        margin-bottom: 1.6em;
+    }
+
+    &__top{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__link{
+        font-family: 'Exo 2';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+        text-align: right;
+        
+        color: #FFFFFF;
+    }
+}
+
+.item-first-cases{
+    width: 100%;
+    &__row{
+        display: flex;
+        align-items: center;
+        gap: 2.5rem;
+        border: 1px solid red;
+    }
+    &__img{
+        // border: 1px solid red;
+        max-width: 55.2rem;
+        height: 38.6rem;
+       
+        img{
+            width: auto;
+            height: 100%;
+           
+        }
+    }
+    &__body{
+        border: 1px solid red;
+        padding-top: 5.1rem;
+        margin-left: auto;
+        // max-width: 29.4rem;
+        // min-height: 26.1rem;
+       
+    }
+    &__logo{
+        width: 10.9rem;
+        height: 3.4rem;
+        margin-bottom: 0.9rem;
+        img{
+         
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__tags-container{
+        // border: 1px solid red;
+        margin-bottom: 2.4rem;
+    }
+    &__tags{
+      
+    }
+    &__tag{
+       text-decoration: none;
+       font-family: 'Exo 2';
+       font-style: italic;
+       display: inline-block;
+       &:not(:last-child){
+        margin-right: 1.6rem;
+       }
+       &-point{
+        display: inline-block;
+        margin-right: .8rem;
+        font-weight: 900;
+        font-size: 1.0rem;
+        line-height: 1.4rem;
+       
+       }
+        &-text{
+           
+            font-weight: 300;
+            font-size: 1.0rem;
+            line-height: 1.4rem;
+            text-decoration-line: underline;
+            color: #FFFFFF;
+        }
+
+
+    }
+    &__title{
+        font-family: 'Exo 2';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2.0rem;
+        line-height: 2.4rem; 
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin-bottom: 0.8em;
+          
+    }
+    &__texts{
+        margin-bottom: 1.4rem;
+    }
+    &__text{
+        margin-bottom: 1.1rem;    
+    }
+    &__bottom{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        
+    }
+}
+
+.slider-cases{
+
+    width: 100%;
+    &__item{
+        min-width: 100%;
+    }
 }

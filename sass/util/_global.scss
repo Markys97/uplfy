@@ -6,12 +6,7 @@ html{
     overflow: hidden;
 }
 
-.section-container{
-    min-height: 53.9rem;
-    padding-left: 15.2rem;
-    padding-left: 15.2rem;
 
-}
 .container{
     width: 100%;
     padding: 0 4rem;
@@ -20,12 +15,24 @@ html{
     width: 3.1rem;
     height: 1.7rem;
     cursor: pointer;
+    
+    cursor: pointer;
+    &:hover{
+        .burger__row{
+            width: 2.3rem;
+            &--small{
+                width: 3.1rem;
+            }
+        }
+    }
     &__row{
         display: block;
         width: 3.1rem;
         height: 0.4rem;
         background: #FFFFFF;
         border-radius: 0.4rem;
+
+        transition: all 600ms ease;
         &:not(:last-child){
             margin-bottom: 0.2rem;
         }

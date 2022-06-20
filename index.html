@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.css">
     <link href="https://fonts.googleapis.com/css?family=Exo+2:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
      rel="stylesheet" />
+
+     <link rel="stylesheet" href="./assets/slick/slick.css">
+     <link rel="stylesheet" href="./assets/slick/slick-theme.css">
     <link rel="stylesheet" href="./sass/main.css">
     <title>Document</title>
 </head>
@@ -57,7 +60,7 @@
             </div>
          </div>
         <div class="wrapper-container" id="sections">
-              <section class="our-work  section " data-color="#6CE0CF" data-text="upfly" data-params="#53CBF9;#88DEFF;-300px;-300px;-120px">
+             <section class="our-work  section " data-color="#6CE0CF" data-text="upfly" data-params="#53CBF9;#88DEFF;-300px;-300px;-120px"> 
                 <div class="our-work__container container ">
                    <div class="our-work__content">
                         <div class="our-work__row">
@@ -169,13 +172,176 @@
                         </div>
                     </div>
                 </div>
+            </section> 
+            <section class="cases section"  data-color="#6CE0CF" data-text="advertising" data-params="#F6A0AF;#FFBFD2;-300px;-300px;-120px">
+                <div class="cases__container container">
+                    <h2 class="cases__title title">Наши кейсы:</h2>
+                    <div class=" cases__top">
+                        <a href="#" class="cases__link link">
+                            <span> Все кейсы</span>
+                        </a>
+                    </div>
+                  
+                    <div class="cases__slider slider-cases">
+                        <div class="slider-cases__item item-first-cases">
+                            <div class="item-first-cases__row">
+                                <div class="item-first-cases__img">
+                                    <img src="./assets/img/img notebook.png" alt="image that shows a computer with our different cases">
+                                </div>
+                                <div class="item-first-cases__body">
+                                    <div class="item-first-cases__logo">
+                                        <img src="./assets/img/лого (1).png" alt="logo">
+                                    </div>
+                                    <div class="item-first-cases__tags-container">
+                                        <div class="item-first-cases__tags">
+                                            <a href="#" class="item-first-cases__tag">
+                                                <span class="item-first-cases__tag-point">#</span> <span class="item-first-cases__tag-text">сайт</span>
+                                            </a>
+                                            <a href="#" class="item-first-cases__tag">
+                                                <span class="item-first-cases__tag-point">#</span> <span class="item-first-cases__tag-text">контекстная реклама</span>
+                                            </a>
+                                            <a href="#" class="item-first-cases__tag">
+                                                <span class="item-first-cases__tag-point">#</span> <span class="item-first-cases__tag-text">landing page</span>
+                                            </a>
+                                        </div>
+                                        <div class="item-first-cases__tags">
+                                            <a href="#" class="item-first-cases__tag">
+                                                <span class="item-first-cases__tag-point">#</span> <span class="item-first-cases__tag-text">сайт</span>
+                                            </a>
+                                            <a href="#" class="item-first-cases__tag">
+                                                <span class="item-first-cases__tag-point">#</span> <span class="item-first-cases__tag-text">контекстная реклама</span>
+                                            </a>
+                                            <a href="#" class="item-first-cases__tag">
+                                                <span class="item-first-cases__tag-point">#</span> <span class="item-first-cases__tag-text">landing page</span>
+                                            </a>
+                                        </div>
+                                        
+                                    </div>
+                                    <h3 class="item-first-cases__title">
+                                        Сайт и контекстная реклама
+                                    </h3>
+                                    <div class="item-first-cases__texts text">
+                                        <p class="item-first-cases__text ">
+                                            Клиент поставил задачу, привлечь покупателей на новый продукт.
+                                        </p>
+                                        <p class="item-first-cases__text">
+                                            Было принято решение разработать лендинг и запустить контекстную рекламу...
+                                        </p>
+                                    </div>
+                                    <div class="item-first-cases__bottom">
+                                        <div class="link-down">
+                                            <a class="link-down__link" href="#">
+                                                <span class="link-down__text">Подробнее</span>
+                                            </a>
+                                            <div class="link-down__fleche"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
             </section>
-            <section class="end section" data-color="none" data-text="" data-params="#F8DD97;#F3CA7A;-300px;-300px;-120px">
-               <div class="end__container">
-                <p class="end__text">это все, дальше ничего нет :)</p>
-               </div>
-            </section>
-            
+            <section class="writing section "  data-color="none" data-text="WRITING" data-params="#F0B3A5;#F8CFB8;-300px;-300px;-120px">
+                <div class="writing__container container">
+                    <h2 class="writing__title title">МЫ ПИШЕМ:</h2>
+                    <div class="writing__row">
+                        <div class="writing__information information-writing">
+                            <h3 class="information-writing__title">Заголовок поста блога максимум в 2 строчки</h3>
+                            <p class="information-writing__date"> <span  class="information-writing__date-text">22.01.2020</span> </p>
+                            <div class="information-writing__img">
+                                <img src="./assets/img/img magazine2 1.png" alt=" magazine picture illustration">
+                            </div>
+                        </div>
+                        <div class="writing__body">
+                           <div class="writing__items">
+                                <div class="writing__item item-writing">
+                                    <h4 class="item-writing__title">Заголовок поста в 1 строку</h4>
+                                    <p class="item-writing__text">
+                                        Краткий анонс максимум на 3 строки потому что больше и не надо здесь размещать.
+                                        Краткий анонс максимум на 3 строки потому что...
+                                    </p>
+                                </div>
+                                <div class="writing__item item-writing">
+                                    <h4 class="item-writing__title">Заголовок поста в 1 строку</h4>
+                                    <p class="item-writing__text">
+                                        Краткий анонс максимум на 3 строки потому что больше и не надо здесь размещать...
+                                    </p>
+                                </div>
+                                <div class="writing__item item-writing">
+                                    <h4 class="item-writing__title">Заголовок поста в 1 строку</h4>
+                                    <p class="item-writing__text">
+                                        Краткий анонс максимум на 3 строки потому что больше и не надо здесь размещать.
+                                        Краткий анонс максимум на 3 строки потому что...
+                                    </p>
+                                </div>
+                           </div>
+                            <div class="writing__bottom">
+                                <a href="#" class="writing__link link">
+                                    <span> Читать блог</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>  
+           <section class="contact section"  data-color="#6CE0CF" data-text="" data-params="#FFCA98;#FFBD80;-300px;-300px;-120px">
+                <div class="contact__container container">
+                    <h2 class="contact__title title">Напишите нам:</h2>
+                    <div class="contact__row">
+                        <div class="contact__body">
+                            <form class="contact__form form" autocomplete="off">
+                                <div class="form__item">
+                                    <label for="name" class="form__label">ФИО*</label>
+                                    <p class="form__input">
+                                        <input type="text" name="name" id="name">
+                                    </p>
+                                </div>
+                                <div class="form__item">
+                                    <label for="phone" class="form__label">Телефон*</label>
+                                    <p class="form__input">
+                                        <input type="tel" name="phone" id="phone">
+                                    </p>
+                                </div>
+                                <div class="form__authorization">
+                                    <div class="form__icon">
+                                        <img src="./assets/img/Vector.svg" alt=" icon">
+                                    </div>
+                                    <p class="form__text">
+                                        Отправляя форму, вы даете согласие на обработку персональных данных
+                                    </p>
+                                </div>
+                                <div class="form__submit">
+                                    <input type="submit" value="Отправить">
+                                </div>
+                            </form>
+                            <div class="contact__data data-contact">
+                                <div class="data-contact__item">
+                                    <div class="data-contact__icon">
+                                        <img src="./assets/img/mail.svg" alt="icon email">
+                                    </div>
+                                    <p class="data-contact__text">info@upfly.ru</p>
+                                </div>
+                                <div class="data-contact__item">
+                                    <div class="data-contact__icon">
+                                        <img src="./assets/img/adress.svg" alt="icon adress ">
+                                    </div>
+                                    <p class="data-contact__text">г. Нижний Новгород, ул. Родионова, 22а</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact__img">
+                            <img src="./assets/img/map_new-tinypng.png" alt=" picture of a carte">
+                        </div>
+                    </div>
+                </div>
+           </section>
+           <section class="end section" data-color="none" data-text="" data-params="#F8DD97;#F3CA7A;-300px;-300px;-120px"> 
+            <div class="end__container">
+             <p class="end__text">это все, дальше ничего нет :)</p>
+            </div>
+         </section> 
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -183,7 +349,8 @@
      crossorigin="anonymous"></script>
     <script src=" https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/vendors/scrolloverflow.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js"></script>
-
+    <script src="./assets/slick/slick.js"></script>
+    <script src="./js/slider.js"></script>
     <script src="./js/script.js"></script>
 </body>
 </html>

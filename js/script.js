@@ -34,6 +34,7 @@ $(document).ready(function(){
             }
         })
     }
+
     setTimeout(
       function() 
       {
@@ -133,8 +134,8 @@ $(document).ready(function(){
     $('.input').focusout(function(event) {
         $(this).prev().removeClass('focus');
     });
-    // Слайдер кейсы
-    // $('#section_4 .slider_custom').slick({
+    // // Слайдер кейсы
+    // $('.').slick({
     //   dots: false,
     //   infinite: true,
     //   speed: 900,
@@ -153,7 +154,7 @@ $(document).ready(function(){
     //         $('#section_4 .slide_card[data-slick-index="'+currentSlide+'"]').animate({opacity:0}, 300);
     //     }
     // });
-    // Слайдер планшетка
+    // // Слайдер планшетка
     // if ($(window).width() < 993) {
     //     $('#section_2 .slider_custom, #section_5 .slider_custom .big_col').slick({
     //       dots: true,
@@ -174,7 +175,7 @@ $(document).ready(function(){
     //     ]
     //     });
     // }
-    // Слайдер мобилка
+    // // Слайдер мобилка
     // if ($(window).width() < 551) {
     //     $('#section_3 .slider_custom').slick({
     //       dots: true,
@@ -212,16 +213,25 @@ $(document).ready(function(){
         fitToSectionDelay: 500,
         touchSensitivity: 15,
         //Дизайн
-        paddingTop:'100px',
+        // paddingTop:'100px',
         scrollHorizontally: true,
         normalScrollElements: '.modal_block',
-        paddingBottom:'100px',
+        // paddingBottom:'100px',
         controlArrows: false,
         verticalCentered: true,
         responsiveWidth: 0,
         onLeave: function(origin, destination, direction){
 
-           
+        //    let sections= $('.section');
+        //    let position;
+        //    sections.each((i,el)=>{
+        //         position= $(el).data('lenght');
+        //        if(position===destination && $(el).data('color')==='none'){
+        //         $('.button-fixe').hide()
+        //        }else{
+        //         $('.button-fixe').show()
+        //        }
+        //    })
             // Затухание
             $('.section[data-lenght="'+destination+'"]').animate({opacity:1}, 800);
             $('.section[data-lenght="'+origin+'"]').animate({opacity:0}, 300);
