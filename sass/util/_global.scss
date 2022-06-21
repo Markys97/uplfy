@@ -306,28 +306,13 @@ a{
     } 
 
     .button-fixe{
-        position: fixed;
-        width: 14.4rem;
-        height: 2.6rem;
+      
         background: unset;
-        border-radius: 45px;
-        display: flex;
-        justify-content: center;
+      
+        justify-content: flex-start;
         align-items: center;
-        z-index: 100;
-        border: none;
-        outline: none;
-        padding: 2rem 0.6rem;
-        left: 3.1rem;
-        bottom: 2.4rem;
-        cursor: pointer;
+        left: 2.3rem;
         &__text{
-            font-family: 'Exo 2';
-            font-style: normal;
-            font-weight: 800;
-            font-size: 1.2rem;
-            line-height: 1.4rem;
-            color: #8ADDEB;
             display: none;
         }
         svg{
