@@ -1,14 +1,7 @@
-// // Переворот экрана
-// if ($(window).width()<1000) {
-//     window.addEventListener("orientationchange", function() {
-//         if (window.matchMedia("(orientation: landscape)").matches) {
-//            location.reload();
-//         }
-//     }, false);
-// }
+
 $(document).ready(function(){
     
-    let handlerButtonFixe=(indice)=>{
+    const handlerButtonFixe=(indice)=>{
         let position;
         $('section').each((index,el)=>{
             let color= $(el).data('color')
@@ -34,12 +27,28 @@ $(document).ready(function(){
             }
         })
     }
+    const changeColorTextButtonFixe=(actifSection)=>{
+        // console.log(actifSection)
+        let sections= $('.section');
+        sections.each((index,section)=>{
+            if(actifSection=== $(section).data('lenght')){
+                $('.button-fixe__text').css({
+                    color:$(section).data('params').split(';')[0]
+                })
+                console.log(actifSection, $(section).data('lenght'),$(section).data('params').split(';')[0])
+            }
+        })
+    }
 
+    
+    
+  
     setTimeout(
       function() 
       {
         $('input[name="HIDDEN_TEXT"]').val('upfly');
       }, 3000);
+
       // Сбор параметров секций
     var contentParams = [], sectionParams = [];
     $('.section').each(function(index, el) {
@@ -134,7 +143,53 @@ $(document).ready(function(){
     $('.input').focusout(function(event) {
         $(this).prev().removeClass('focus');
     });
-    // // Слайдер кейсы
+// Изменение textarea пк
+$(document).on('input', ' textarea', function(event) {
+    $('.scroll_block').animate({
+        scrollTop: $(".about-contact__data ").offset().top
+    }, 0);
+    var min_line_height = 40;
+    if ($(window).width()) {
+        min_line_height = 26;    
+    }
+    $('#comment_div').html($(this).val());
+   
+    var obj_height = $('#comment_div')[0].offsetHeight+12;
+   
+    if ($(window).width()) {
+        obj_height = $('#comment_div')[0].offsetHeight+6;
+    }
+    if (event.keyCode == 13) obj_height += min_line_height;
+    else if (obj_height < min_line_height) obj_height = min_line_height;
+    $(this).css('height', obj_height + 'px');
+});
+// Изменение textarea планфет
+$(document).on('input', ' textarea', function(event) {
+    $('.scroll_block').animate({
+        scrollTop: $(".about-contact__data ").offset().top
+    }, 0);
+    var min_line_height = 40;
+    if ($(window).width()) {
+        min_line_height = 26;    
+    }
+    $('#comment_div-mobile').html($(this).val());
+   
+    var obj_height = $('#comment_div-mobile')[0].offsetHeight+12;
+   
+    if ($(window).width()) {
+        obj_height = $('#comment_div-mobile')[0].offsetHeight+6;
+    }
+    if (event.keyCode == 13) obj_height += min_line_height;
+    else if (obj_height < min_line_height) obj_height = min_line_height;
+    $(this).css('height', obj_height + 'px');
+});
+    //mask
+
+ if ($(".form__input-phone").length !== 0) {
+    Inputmask("+7 (999) 999-99-99").mask(".form__input-phone");
+ }
+       
+     // Слайдер кейсы
     // $('.').slick({
     //   dots: false,
     //   infinite: true,
@@ -189,23 +244,23 @@ $(document).ready(function(){
     //     });
     // }
     // Изменение textarea
-    $(document).on('input', '.right_slide textarea', function(event) {
-        $('.scroll_block').animate({
-            scrollTop: $(".scroll_block .text").offset().top
-        }, 0);
-        var min_line_height = 40;
-        if ($(window).width()) {
-            min_line_height = 26;    
-        }
-        $('#comment_div').html($(this).val());
-        var obj_height = $('#comment_div')[0].offsetHeight+12;
-        if ($(window).width()) {
-            obj_height = $('#comment_div')[0].offsetHeight+6; 
-        }
-        if (event.keyCode == 13) obj_height += min_line_height;
-        else if (obj_height < min_line_height) obj_height = min_line_height;
-        $(this).css('height', obj_height + 'px');
-    });
+    // $(document).on('input', '.right_slide textarea', function(event) {
+    //     // $('.scroll_block').animate({
+    //     //     scrollTop: $(".scroll_block .text").offset().top
+    //     // }, 0);
+    //     var min_line_height = 40;
+    //     if ($(window).width()) {
+    //         min_line_height = 26;    
+    //     }
+    //     $('#comment_div').html($(this).val());
+    //     var obj_height = $('#comment_div')[0].offsetHeight+12;
+    //     if ($(window).width()) {
+    //         obj_height = $('#comment_div')[0].offsetHeight+6; 
+    //     }
+    //     if (event.keyCode == 13) obj_height += min_line_height;
+    //     else if (obj_height < min_line_height) obj_height = min_line_height;
+    //     $(this).css('height', obj_height + 'px');
+    // });
     // Процесс перелистывания секций
     var sectionSettings = {
         // Скроллинг
@@ -222,16 +277,7 @@ $(document).ready(function(){
         responsiveWidth: 0,
         onLeave: function(origin, destination, direction){
 
-        //    let sections= $('.section');
-        //    let position;
-        //    sections.each((i,el)=>{
-        //         position= $(el).data('lenght');
-        //        if(position===destination && $(el).data('color')==='none'){
-        //         $('.button-fixe').hide()
-        //        }else{
-        //         $('.button-fixe').show()
-        //        }
-        //    })
+            changeColorTextButtonFixe(destination)
             // Затухание
             $('.section[data-lenght="'+destination+'"]').animate({opacity:1}, 800);
             $('.section[data-lenght="'+origin+'"]').animate({opacity:0}, 300);
@@ -387,3 +433,4 @@ $(document).ready(function(){
     }
     $('#sections').fullpage(sectionSettings);
 });
+
