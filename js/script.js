@@ -58,7 +58,7 @@ $(document).ready(function(){
         // Параметры контента на фоне
         contentParams.push($(el).data('text')).par;
     });
-    
+  
       // Открытие модальных блоков
       if(window.location.hash.includes('#')){
         var click = window.location.hash;
@@ -262,11 +262,14 @@ $(document).on('input', ' textarea', function(event) {
     //     $(this).css('height', obj_height + 'px');
     // });
     // Процесс перелистывания секций
+   
+    
     var sectionSettings = {
         // Скроллинг
         scrollingSpeed: 800,
         fitToSectionDelay: 500,
         touchSensitivity: 15,
+
         //Дизайн
         // paddingTop:'100px',
         scrollHorizontally: true,
@@ -276,7 +279,8 @@ $(document).on('input', ' textarea', function(event) {
         verticalCentered: true,
         responsiveWidth: 0,
         onLeave: function(origin, destination, direction){
-
+            // change tex color of button fixe 
+           
             changeColorTextButtonFixe(destination)
             // Затухание
             $('.section[data-lenght="'+destination+'"]').animate({opacity:1}, 800);
@@ -287,6 +291,7 @@ $(document).on('input', ' textarea', function(event) {
                 transition: "all 1s ease-out",
             });
             // Изменение цвета фона
+            console.log(sectionParams);
             $('.background').css({
                 "box-shadow": "inset "+sectionParams[destination-1][2]+" "+sectionParams[destination-1][3]+" 300px "+sectionParams[destination-1][4]+""+sectionParams[destination-1][1],
                 background: sectionParams[destination-1][0],
@@ -298,6 +303,24 @@ $(document).on('input', ' textarea', function(event) {
             $('.background div:not(.active)').html(contentParams[destination-1]).fadeIn('500');
         },
     }
+    $('section').each((i,el)=>{
+        if($(el).hasClass('yandex-direct')){
+           
+            sectionSettings.fitToSection=false
+            sectionSettings.autoScrolling=false
+            console.log(console.log('mama'))
+            $('.yandex-direct-helper').css({
+                display:'none'
+            })
+            
+            
+        
+        }else{
+            sectionSettings.fitToSection=true
+            sectionSettings.autoScrolling=true
+        }
+    })
+    
     if ($(window).width() < 1024) {
         sectionSettings = {
             // Скроллинг

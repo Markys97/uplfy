@@ -1,0 +1,211 @@
+.yandex-direct{
+
+    
+  
+    border: 1px solid;
+    width: 100%;
+    border: 10px solid;
+    padding-top: 8rem;
+    z-index: 1;
+    // &::after{
+    //     content: '';
+    //     position: fixed;
+    //     left: 0;
+    //     bottom: 0;
+    //     width: 100vw;
+    //     height: 3rem;
+    //     background: #FFFFFF;
+    //     box-shadow: 0px 2.13333px 16px rgba(0, 0, 0, 0.15);
+    // }
+
+    &__container{
+        padding-left: 16.5rem;
+        position: fixed;
+        
+
+    }
+
+    &__content{
+        max-width: 80rem;
+        // flex-grow: 1;
+        &::after{
+            content: '';
+            display: block;
+            position: absolute;
+            height: 2rem;
+            top: 0;
+            left: 0;
+            background: #000;
+            z-index: 20;
+        }
+
+        
+    }
+    &__row{
+        display: flex;
+        align-items: center;
+    }
+    &__img{
+        width: 39.4rem;
+        height: 39.1rem;
+        img{
+            max-width: auto;
+            height: 100%;
+        }
+    }
+    &__body{
+        max-width: 30.4rem;
+        
+    }
+
+    &__title{
+        font-size: 5.2rem;
+        line-height: 5.4rem; 
+        margin-bottom: 3.4rem;
+    }
+
+    @media screen and (max-width:1024px) {
+        min-height: 81.7rem;
+        padding-top: 12.4rem;
+      
+        &__container{
+            padding-left: 0;
+        }
+        
+        &__content{
+            max-width: 60.6rem;
+            margin: auto;
+            
+          
+        }
+        &__row{
+            display: flex;
+            align-items: auto;
+            flex-direction:column-reverse;
+            gap: 8.9rem;
+        }
+        &__img{
+            width: 44.6rem;
+            height: 34.6rem;
+         
+            img{
+                max-width: auto;
+                height: 100%;
+            }
+        }
+        &__body{
+            max-width: 45.8rem;            
+        }
+        &__title{
+            font-size: 5rem;
+            line-height: 6.2rem; 
+            margin-bottom: 3.2rem;
+            text-align: center;
+
+        }
+        &__text{
+            text-align: center;
+            max-width: 39.8rem;
+        }
+    }
+    @media screen and (max-width:668px) {
+        min-height: 76.2rem;
+        padding-top: 15.3rem!important;
+
+       
+        &__content{
+            max-width: 28rem;
+            margin: auto;            
+          
+        }
+       
+        &__img{
+            width: 30.6rem;
+            height: 23.7rem;
+            img{
+               
+                width: 100%;
+                height: auto;
+            }
+        }
+        &__body{
+            max-width: 28rem;
+
+        }
+        &__title{
+            font-size: 3.0rem;
+            line-height: 3.4rem;
+            margin-bottom: 2.4rem;
+
+
+        }
+        &__text{
+            text-align: center;
+            max-width: 100%;
+        }
+    }
+}
+
+.article-yandex{
+    max-height: 47.3rem;
+    position: absolute;
+    top: 39rem;
+    max-width: 80rem;
+    padding-left: 8rem;
+    padding-right: 3.8rem;
+    padding-top: 4.6rem;
+    background: #FFFFFF;
+    box-shadow: 0px 2.13333px 16px rgba(0, 0, 0, 0.15);
+    border-radius: 5.3rem 5.3rem 0 0;
+    overflow: auto;
+    &__text{
+        color: #777B7C;
+        margin-bottom: 2.4rem;
+    }
+    &__img{
+        max-width: 33.8rem;
+        height: 25.0rem;
+        position: relative;
+        margin-top: -5rem;
+        img{
+            max-width: auto;
+            height: 100%;
+        }
+    }
+    &__row{
+        display: flex;
+        margin-bottom: 6.2rem;
+        gap: 3.2rem;
+    }
+    &__title{
+        margin-bottom: 3.2rem;
+        font-family: 'Exo 2';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 2.4rem;
+        line-height: 3.0rem;
+        text-transform: uppercase;
+        color: #777B7C;
+        max-width: 29.6rem;
+    }
+    &__text{
+        &:first-child{
+            max-width: 32rem;
+        }
+    }
+}
+
+.block-helper{
+    background: linear-gradient(257.56deg, #EB9BCA 22.53%, #EBB8D6 69.82%);
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100vw;
+    height: 150rem;
+   
+    
+
+}

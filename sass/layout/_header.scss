@@ -17,6 +17,16 @@
         margin-bottom:1.6rem ;
     }
     &__tel{
+        &--blue{
+            a{
+                color: #53CBF9!important;
+            }
+        }
+        &--red{
+            a{
+                color: #FF716E!important;
+            }
+        }
         a{
             font-family: 'Exo 2';
             font-style: normal;
@@ -25,6 +35,7 @@
             line-height: 1.8rem;
             color: #FFFFFF;
             text-decoration: none;
+            
         }
         display: none;
         &--desktop{
@@ -39,9 +50,7 @@
 
     @media screen and (max-width:1023px) {
         &__tel{
-            a{
-              
-            }
+           
             display: block;
             &--desktop{
                display: none;

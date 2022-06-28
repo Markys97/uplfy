@@ -17,4 +17,32 @@
 @import './layout/employee';
 @import './layout/about-contact';
 
-@import './page/about'
+
+
+// секции для страници " О КОМПАНИИ"
+@import './layout/company-about';
+@import './layout/comp-about-us';
+@import './layout/company-job';
+@import './layout/company-review';
+
+// секции для страници " 9. Услуга-Яндекс директ"
+@import './layout/yandex-direct';
+
+// секции для страници " 404"
+@import './layout/404';
+
+// секции для страници " Спасибо за обратную связь!"
+@import './layout/thanks';
+
+// секции для страници " ВАКАНСИИ"
+@import './layout/vacancie';
+
+// секции для страници " ОТЗЫВЫ"
+@import './layout/comment-page';
+
+
+//  страници сайта
+@import './page/about';
+@import './page/company';
+@import './page/yandex';
+@import './page/vacancie';

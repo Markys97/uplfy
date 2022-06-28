@@ -7,6 +7,7 @@ html{
 }
 body{
     font-family: 'Exo 2';
+    
 }
 
 
@@ -26,6 +27,16 @@ body{
             &--small{
                 width: 3.1rem;
             }
+        }
+    }
+    &--blue{
+        .burger__row{
+            background: #53CBF9
+        }
+    }
+    &--red{
+        .burger__row{
+            background: #FF716E
         }
     }
     &__row{
@@ -76,6 +87,13 @@ body{
         line-height: 2.4rem;
         margin-bottom: 0.266rem;
     }
+    &--big{
+        font-size: 5.2rem;
+        line-height: 5.3rem;
+    }
+    &--red{
+        color: #FF716E;
+    }
     
 }
 .text{
@@ -85,11 +103,21 @@ body{
     font-size: 1.4rem;
     line-height: 1.8rem;
     color: #FFFFFF;
+    
    
 }
 
 .link{
     display: block;
+    height: 2.8rem;
+    &--red{
+        span{
+            color: #FF716E!important;
+            &::after{
+                background: #FF716E!important;
+            }
+        }
+    }
     &:hover{
         span{
             &::after{
@@ -117,7 +145,18 @@ body{
             bottom: -.4rem;
         }
     }
+    &--blue{
+        span{
+            color: #53CBF9;
+            &::after{
+                background: #53CBF9;
+            }
+        }
+    }
+   
 }
+
+
 a{
     font-family: 'Exo 2';
     font-style: normal;
@@ -275,9 +314,77 @@ a{
     }
 }
 
+.button-close{
+    width: 1.828rem;
+    height: 1.825rem;
+    position: relative;
+    // border: 1px solid red;
+    &:hover{
+        
+        .button-close__row{
+           
+            &--long{
+                transform: rotate(0deg);
+            }
+            &--right{
+                    transform: rotate(135deg);
+            }
+            &--left{
+                left: .9rem;
+                top: .4rem;
+                transform: rotate(45deg);
+                
+            }
+        }
+    }
+    cursor: pointer;
+    &__row{
+        display: block;
+        height: .427rem;
+        background: #D6DDE0;
+        border-radius: 2.13333rem;
+        position: absolute;
+        transition: all 300ms ease;
+        &--short{
+            width:60%;
+            
+            transform: rotate(45deg);
+
+        }
+        &--long{
+            top: 0.7rem;
+            left: -0.3rem;
+            width: 2.3rem;
+            transform: rotate(-45deg);
+        }
+        &--left{
+            left: 0rem;
+            top: .3rem;
+            
+        }
+        &--right{
+            left: 0.8rem;
+            top: 1.1rem;
+        }
+    }
+}
 
 
 .button-fixe{
+    &--red{
+        background: #FF716E;
+
+        .button-fixe__text{
+            color:#FFFFFF;
+        }
+    }
+    &--blue{
+        background: #8ADDEB;
+
+        .button-fixe__text{
+            color:#FFFFFF;
+        }
+    }
     position: fixed;
     width: 14.4rem;
     height: 2.6rem;
@@ -305,19 +412,26 @@ a{
     svg{
         display: none;
     }
+    &-vacancie{
+        z-index: 10!important;
+    }
 }
 .big-word{
     font-family: 'Exo 2';
     font-style: normal;
     font-weight: 900;
     font-size: 14.4rem;
-    line-height: 17.3rem;
     text-transform: uppercase;   
     color: #FFFFFF; 
     opacity: 0.1;
     position: fixed;
     z-index:10;
     bottom:11.8rem ;
+    // border: 1px solid red;
+    &--blue{
+        color: #53CBF9;
+        font-size: 28rem;
+    }
     
    
 }
@@ -327,39 +441,34 @@ a{
     align-items: center;
     justify-content: center;
     height: 2rem;
+    position: relative;
+    &:hover{
+        .link-down__fleche{
+           
+            right: -2.5rem;
+            
+            
+        }
+    }
     
     &__fleche{
         width: 3.1rem;
         height: 0.25rem;
-        background: rgba(#FFFFFF,0.7);
-        margin-top: .2rem;
-        margin-left: -1rem;
-        position: relative;
-        &::after{
-            position: absolute;
-            content: '';
-            background: rgba(#FFFFFF,0.7);
-            width:1rem;
-            height: 0.15rem;
-            transform: rotate(45deg);
-            left: 2.2rem;
-            top: -0.3rem;
+        transition: all 300ms ease-in-out;
+        top: 0.6rem;
+        right: -1.5rem;
+        position: absolute;
+        img{
+            width: 100%;
+            height: auto;
         }
-        &::before{
-            position: absolute;
-            content: '';
-            background: rgba(#FFFFFF,0.7);
-            width:1rem;
-            height: 0.15rem;
-            transform: rotate(-45deg);
-            left: 2.2rem;
-            top: 0.4rem;
-        }
+        
     }
     &__link{
         position: relative;
         display: inline-block;
         z-index: 10;
+        
     }
 }
 
@@ -379,6 +488,10 @@ a{
     right: 0;
     box-shadow: rgb(130, 214, 240) -300px -300px 300px -120px inset; 
     background: rgb(131, 202, 242);
+    &--white{
+        background: #FFFFFF;
+        box-shadow:unset;
+    }
 }
 .wrapper-container{
     z-index: 20;
@@ -387,7 +500,8 @@ a{
 
 .navigation{
     position: fixed;
-   
+    left: -0.013rem;
+    top: 17rem;
     z-index: 100;
     transform: rotate(90deg);
 
@@ -418,18 +532,21 @@ a{
     }
 }
  
-
-
-
-
-
-
-
-
-
-
-
-
+.big-word-company{
+    font-size: 4rem;
+}
+.social-network{
+    display: flex;
+    gap: 0.4rem;
+    &__icon{
+        width: 1.9rem;
+        height: 1.9rem;
+        img{
+            width: 100%;
+            height: 100%;
+        } 
+    }
+}
 
 
 
@@ -451,6 +568,10 @@ a{
             line-height: 2.4rem;
             margin-bottom: 0.266rem;
         }
+        &--big{
+            font-size: 5.0rem;
+            line-height: 6.2rem;
+        }
         
     }
     .text{
@@ -470,8 +591,22 @@ a{
         left: 50%;
         transform: translateX(-50%);
         bottom: 16.4rem;
+        &--blue{
+            font-size: 26.0rem;
+            line-height: 31.2rem;
+        }
         
        
+    }
+
+    .button-fixe{
+        &--blue{
+            background: #53CBF9;
+    
+            .button-fixe__text{
+                color:#FFFFFF;
+            }
+        }
     }
     
 
@@ -489,7 +624,7 @@ a{
     .button-fixe{
       
         background: unset;
-      
+       
         justify-content: flex-start;
         align-items: center;
         left: 2.3rem;
@@ -511,16 +646,26 @@ a{
             line-height: 2.4rem;
             margin-bottom: 0.266rem;
         }
+        &--red{
+            font-size: 1.8rem;
+        }
         
     }
     .big-word{
        
         font-size: 5rem;
-        
         bottom:11.8rem ;
         left: 50%;
         transform: translateX(-50%);
-        bottom: 0;
+        bottom: 11.7rem;
+        width: 100%;
+
+        text-align: center;
+        &--blue{
+            font-size: 12.0rem;
+            line-height: 14.4rem;
+            bottom: 18.7rem;
+        }
         
        
     }
